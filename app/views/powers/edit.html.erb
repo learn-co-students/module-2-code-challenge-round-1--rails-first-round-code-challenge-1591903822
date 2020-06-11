@@ -1,0 +1,17 @@
+<h1>Update Power</h1>
+
+<%= form_for @power do |f| %>
+
+  <%= f.label 'Name:' %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label 'Description:' %><br>
+  <%= f.text_field :description %><br>
+
+  <%= f.label 'Heroine:' %><br>
+  <%= collection_check_boxes(:heroinepower, :heroine_id, @heroines, :id, :name, {:multiple => true}) %>
+  <br>
+
+  <%= f.submit "Update Power" %>
+<% end %>
+
